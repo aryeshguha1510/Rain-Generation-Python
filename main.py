@@ -94,15 +94,15 @@ if __name__ == '__main__':
 
     config = parser.parse_args()
 
-    for file in glob.glob(config.input_dir):
-        process(img_name = file,
-                out_dir = config.output_dir,
-                noise = config.noise,
-                rain_len = config.rain_len,
-                rain_angle = config.rain_angle,
-                rain_thickness = config.rain_thickness,
-                alpha = config.alpha
-                )
+    
+    process(img_name = config.input_dir,
+            out_dir = config.output_dir,
+            noise = config.noise,
+            rain_len = config.rain_len,
+            rain_angle = config.rain_angle,
+            rain_thickness = config.rain_thickness,
+            alpha = config.alpha
+            )
 
 
 
